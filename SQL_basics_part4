@@ -1,0 +1,68 @@
+--GROUP BY shows the unique values in a column, like the DISTINCT command
+--GROUP BY creates a new row with the rows ordered by a criterion, DISTINCT RETURNS only the unique value of the column
+--SELECT DISTINCT Gender
+--FROM EmployeeDemographics
+
+
+--SELECT DISTINCT Gender COUNT(Gender)
+--FROM EmployeeDemographics
+--GROUP BY Gender
+
+
+--SELECT Gender, Age, COUNT(Gender)
+--FROM EmployeeDemographics
+--GROUP BY  Age, Gender
+
+
+--SELECT *
+--FROM EmployeeDemographics
+
+--SELECT Gender, COUNT(Gender) AS CountGender
+--FROM EmployeeDemographics
+--WHERE Age>31
+--GROUP BY   Gender
+--ORDER BY CountGender DESC
+
+--SELECT *
+--FROM EmployeeDemographics
+--ORDER BY Age DESC, Gender ASC
+
+--SAME AS ABOVE
+--SELECT *
+--FROM EmployeeDemographics
+--ORDER BY 4 DESC, 5 ASC
+
+
+--SELECT LastName, COUNT(LastName) AS NUMBER_
+--FROM EmployeeDemographics
+--GROUP BY LastName
+--ORDER BY NUMBER_
+
+
+--SELECT LastName, COUNT(LastName) AS NUMBER_
+--FROM EmployeeDemographics
+--GROUP BY LastName
+--ORDER BY LastName
+
+--SELECT *
+--FROM EmployeeDemographics
+
+--SELECT LastName, COUNT(LastName) AS NUMBER_
+--FROM EmployeeDemographics
+--GROUP BY LastName
+--ORDER BY LastName
+
+SELECT *
+FROM EmployeeDemographics
+
+
+--SELECT LastName
+--FROM EmployeeDemographics
+--GROUP BY LastName
+
+--SELECT DISTINCT LastName
+--FROM EmployeeDemographics
+
+--SELECT LastName, COUNT(LastName)
+--FROM EmployeeDemographics
+--GROUP BY LastName
