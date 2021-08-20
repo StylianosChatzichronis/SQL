@@ -1,0 +1,51 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+--SELECT TOP (1000) [EmployeeID]
+--      ,[JobTitle]
+--      ,[Salary]
+--  FROM [SQL Tutorial].[dbo].[EmployeeSalary]
+
+--return all rows from table EmployeeDemographics
+--SELECT *
+--FROM EmployeeDemographics
+
+
+--return top 5 rows from table EmployeeDemographics
+--SELECT TOP 5 *
+--FROM EmployeeDemographics
+
+--return unique values of EmployeeID column
+--SELECT DISTINCT(EmployeeID)
+--from EmployeeDemographics
+
+--return unique values of Gender column
+--SELECT DISTINCT(Gender)
+--from EmployeeDemographics
+
+--return the number of non-null values in the row LastName, 
+--returned column has name (No column name)
+--SELECT COUNT(LastName)
+--FROM EmployeeDemographics
+
+
+--return the number of non-null values in the row LastName, 
+--returned column has name LastNameCount
+--SELECT COUNT(LastName) AS LastNameCount
+--FROM EmployeeDemographics
+
+--return the maximum value from column salary
+--SELECT MAX(salary)
+--FROM EmployeeSalary
+
+--return the maximum value from column salary
+--SELECT MIN(salary)
+--FROM EmployeeSalary
+
+
+--return the average value from column salary
+--SELECT AVG(salary)
+--FROM EmployeeSalary
+
+
+--you are in the master database, select data from SQL_Tutorial database
+SELECT *
+FROM SQL_Tutorial.dbo.EmployeeSalary
