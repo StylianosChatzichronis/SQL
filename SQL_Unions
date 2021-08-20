@@ -1,0 +1,24 @@
+--SELECT *
+--from SQL_Tutorial.dbo.EmployeeDemographics
+--UNION ALL
+--SELECT *
+--FROM SQL_Tutorial.dbo.WareHouseEmployeeDemographics
+
+--SELECT *
+--FROM SQL_Tutorial.dbo.WareHouseEmployeeDemographics
+--FULL Outer Join SQL_Tutorial.dbo.WareHouseEmployeeDemographics
+--ON EmployeeDemographics.EmployeeID
+
+--SELECT *
+--from SQL_Tutorial.dbo.EmployeeDemographics
+--UNION ALL
+--SELECT *
+--FROM SQL_Tutorial.dbo.WareHouseEmployeeDemographics
+--ORDER BY EmployeeID
+
+--SELECT EmployeeID, FirstName, Age
+--from SQL_Tutorial.dbo.EmployeeDemographics
+--UNION
+--SELECT EmployeeID, JobTitle, Salary
+--FROM SQL_Tutorial.dbo.EmployeeSalary
+--ORDER BY EmployeeID
