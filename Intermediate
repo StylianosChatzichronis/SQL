@@ -1,0 +1,73 @@
+--Select * 
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+
+--Select * 
+--FROM SQL_Tutorial.dbo.EmployeeSalary
+
+--JOIN is a way to combine two tables
+
+
+--INNER JOIN unites the two tables where 
+--EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--ONLY COMMON features
+--SELECT * 
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Inner Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--FULL OUTER JOIN unites the two tables where 
+--EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--If  there are NULL values in the EmployeeID it sets to null 
+--It creates new 
+--SELECT * 
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Full Outer Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+
+--take everything left table but what is in the right table
+--that has match with the left table
+--SELECT * 
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Left Outer Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+
+--SELECT * 
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Right Outer Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Inner Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+--SELECT EmployeeSalary.EmployeeID, FirstName, LastName, JobTitle, Salary
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Inner Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+
+
+--SELECT EmployeeDemographics.EmployeeID, FirstName, LastName, JobTitle, Salary
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+--Inner Join SQL_Tutorial.dbo.EmployeeSalary
+--on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+--WHERE FirstName <> 'Michael'
+--ORDER BY Salary DESC 
+
+--FIND AVG salary of salesman
+select Jobtitle, avg(Salary)
+FROM SQL_Tutorial.dbo.EmployeeDemographics
+Inner Join SQL_Tutorial.dbo.EmployeeSalary
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+WHERE Jobtitle='Salesman'
+GROUP BY Jobtitle
+
+
+--FIND AVG salary of each profession
+select Jobtitle, avg(Salary)
+FROM SQL_Tutorial.dbo.EmployeeDemographics
+Inner Join SQL_Tutorial.dbo.EmployeeSalary
+on EmployeeDemographics.EmployeeID = EmployeeSalary.EmployeeID
+GROUP BY Jobtitle
