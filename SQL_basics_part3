@@ -1,0 +1,75 @@
+----------------SELECTING FROM DIFFERENT DATABASE-----------
+
+--return everything from EmployeeDemographics except records that have in the FirstName column the name Jim
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE FirstName <> 'Jim'
+
+
+--return all records from EmployeeDemographics that in the Age column have values greater than 30
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Age > 30
+
+--return all records from EmployeeDemographics that in the Age column have values  equal or greater than 30
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Age >= 30
+
+--return all records from EmployeeDemographics that in the Age column have values  equal or greater than 30
+--AND they are Male
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Age >= 32 AND Gender = 'Male'
+
+
+--return all records from EmployeeDemographics that in the Age column have values  equal or greater than 30
+--AND they are Male
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Age >= 32 AND Gender = 'Male'
+
+
+--%---> wildcard
+-- LastName starts with S
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE LastName LIKE 'S%' 
+
+
+-- LastName have a S letter
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE LastName LIKE '%S' 
+
+-- LastName include S and ott in the LastName
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE LastName LIKE '%S%ott%' 
+
+--return records that their value in column Firstname has no NULL values
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Firstname is NOT NULL
+
+--return records that their value in column Firstname has value either Jim or Michael
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Firstname IN ('Jim','Michael')
+
+--return records that their value in column Lastname has value either Scott or Palmer
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Lastname IN ('Scott','Palmer')
+
+--return records that their value in column Lastname Scott and in the Firstname Toby
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Lastname='Scott' AND FirstName='Toby'
+
+--return records that their value in column Lastname Scott or in the Firstname Jim
+--SELECT *
+--FROM EmployeeDemographics
+--WHERE Lastname='Scott' OR FirstName='Jim'
+
+
