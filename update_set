@@ -1,0 +1,28 @@
+--INSERT INTO -->imports new data, CREATE A NEW ROW
+--UPDATE --> ALTER AN EXISTING ROW
+--SET , set a value to a null value
+
+--SELECT *
+--FROM SQL_Tutorial.dbo.EmployeeDemographics
+
+--UPDATE SQL_Tutorial.dbo.EmployeeDemographics
+--SET EmployeeID = 1012
+--WHERE FirstName = 'JiDS' AND LastName = 'HalDSDSper'
+
+
+
+--UPDATE SQL_Tutorial.dbo.EmployeeDemographics
+--SET Age = 31, Gender = 'Female'
+--WHERE FirstName = 'Holly' AND LastName = 'Flax'
+
+--DELETE FROM SQL_Tutorial.dbo.EmployeeDemographics
+--WHERE EmployeeID = 1005
+
+
+SELECT *
+FROM SQL_Tutorial.dbo.EmployeeDemographics
+WHERE EmployeeID = 1004
+
+SELECT *
+FROM SQL_Tutorial.dbo.EmployeeDemographics
+
