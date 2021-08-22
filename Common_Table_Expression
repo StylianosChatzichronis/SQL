@@ -1,0 +1,16 @@
+/****** Script for SelectTopNRows command from SSMS  ******/
+--CTE Common Table Expression
+
+WITH CTE_Employee as 
+(SELECT FirstName, LastName, Gender, Salary
+, COUNT( Gender) OVER (PARTITION BY Gender) as TotalGender
+, AVG(Salary) OVER (PARTITION BY Gender) as AvgSalary
+FROM SQL_Tutorial.dbo.EmployeeDemographics  dem
+JOIN SQL_Tutorial.dbo.EmployeeSalary  sal
+ON dem.EmployeeID = sal.EmployeeID
+WHERE Salary > '45000'
+)
+
+select FirstName, AvgSalary
+FROM CTE_Employee
+
