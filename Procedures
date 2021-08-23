@@ -1,0 +1,71 @@
+--CREATE PROCEDURE Temp_Employee
+--AS
+--Create table #temp_employee (
+--JobTitle varchar(100),
+--EmployeesPerJob int ,
+--AvgAge int,
+--AvgSalary int
+--)
+
+
+--Insert into #temp_employee
+--SELECT JobTitle, Count(JobTitle), Avg(Age), AVG(salary)
+--FROM SQL_Tutorial.dbo.EmployeeDemographics emp
+--JOIN SQL_Tutorial.dbo.EmployeeSalary sal
+--	ON emp.EmployeeID = sal.EmployeeID
+--group by JobTitle
+
+
+--Select * 
+--From #temp_employee
+
+--EXEC Temp_Employee
+
+
+EXEC Temp_Employee @JobTitle = 'Salesman'
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------
+
+
+
+
+
+USE [SQL_Tutorial]
+GO
+/****** Object:  StoredProcedure [dbo].[Temp_Employee]    Script Date: 8/23/2021 11:33:29 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[Temp_Employee]
+@JobTitle nvarchar(100)
+
+AS
+Create table #temp_employee (
+JobTitle varchar(100),
+EmployeesPerJob int ,
+AvgAge int,
+AvgSalary int
+)
+
+
+Insert into #temp_employee
+SELECT JobTitle, Count(JobTitle), Avg(Age), AVG(salary)
+FROM SQL_Tutorial.dbo.EmployeeDemographics emp
+JOIN SQL_Tutorial.dbo.EmployeeSalary sal
+	ON emp.EmployeeID = sal.EmployeeID
+	WHERE JobTitle = @JobTitle
+group by JobTitle
+
+
+Select * 
+From #temp_employee
